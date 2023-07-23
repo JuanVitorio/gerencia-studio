@@ -1,0 +1,142 @@
+* {
+  margin: none;
+  padding: none;
+}
+
+body {
+  background-color: rgb(199, 207, 221);
+  font-family: Arial, Helvetica, sans-serif;
+  padding: 10px 30px;
+  cursor: default;
+}
+
+h1 {
+  color: white;
+  text-shadow: #003A66 2px 2px 1px;
+}
+
+table {
+  text-align: center;
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  border: black 1px solid;
+  margin-top: 20px;
+  box-shadow: 10px 10px 5px rgba(0, 0, 0, 0.3);
+}
+
+th {
+  font-size: 1.5rem;
+  padding-bottom: 10px;
+  text-align: center;
+}
+
+tr {
+  border: 1px solid black;
+}
+
+td {
+  padding: 10px 10px;
+  border: black 1px solid;
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  margin: auto;
+}
+
+.nome {
+  font-weight: bold;
+}
+
+a {
+  text-decoration: none;
+  color: #1e6fad;
+  transition: .1s;
+  cursor: pointer;
+}
+
+a:hover {
+  color: #5486ac;
+}
+
+.new {
+  background-color: #0183E6;
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  transition: .5s;
+  width: 150px;
+  text-align: center;
+}
+
+.new:hover {
+  color: white;
+  background-color: #0d5b98;
+}
+
+.update {
+  font-weight: bold;
+  color: #0183E6;
+}
+
+.delete {
+  font-weight: bold;
+  color: rgb(255, 103, 79);
+}
+
+.a_link {
+  background-color: #e8eef3;
+  outline: none;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  color: white;
+}
+
+.a_link:hover {
+  color: white;
+
+}
+
+.editar {
+  background-color: #0183E6;
+  transition: .5s;
+}
+
+.editar:hover {
+  background-color: #0d5b98;
+}
+
+.deletar {
+  background-color: rgb(255, 103, 79);
+  transition: .5s;
+}
+
+.deletar:hover {
+  background-color: rgb(189, 70, 52);
+  color: white;
+}
+
+.td_titulo {
+  font-weight: bold;
+}
+
+.voltar {
+  padding: 10px;
+  background-color: #0183E6;
+  width: 60px;
+  margin-top: 20px;
+  color: white;
+  text-align: center;
+  border-radius: 10px;
+  font-weight: bold;
+  transition: .5s;
+}
+
+.voltar:hover {
+  background-color: #0d5083;
+  color: white;
+}

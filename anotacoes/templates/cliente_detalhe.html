@@ -1,0 +1,51 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Detalhes de {{ cliente.nome }}</title>
+
+  <link rel="stylesheet" href="{% static '/css/style.css' %}">
+
+</head>
+
+<body>
+
+  <div class="box">
+
+    <h1>Detalhes do cliente: {{ cliente.nome }}</h1>
+
+    <table>
+
+      <th>Detalhes</th>
+
+      <tr>
+        <td class="td_titulo">Nome</td>
+        <td class="td_titulo">Fotos</td>
+        <td class="td_titulo">Observação</td>
+        <td class="td_titulo">Data</td>
+        <td class="delete">Devendo</td>
+      </tr>
+
+      <tr>
+        <td>{{ cliente.nome }}</td>
+        <td>{{ cliente.fotos }}</td>
+        <td>{{ cliente.observacao }}</td>
+        <td>{{ cliente.data }}</td>
+        <td> {% if cliente.nome in devendo.pessoa %}
+          devendo.valor
+          {% else %}
+          Não
+          {% endif %}</td>
+      </tr>
+    </table>
+
+    <a href="{% url 'clientes' %}" class="voltar">Voltar</a>
+  </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,50 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anotações</title>
+
+  <link rel="stylesheet" href="{% static '/css/style.css' %}">
+
+</head>
+
+<body>
+  <div class="box">
+    <h1>Clientes</h1>
+    <a href="{% url 'new_anotacao' %}" class="new">Nova anotação</a>
+    <table>
+
+      <th>Anotações</th>
+
+      <tr>
+        <td class="td_titulo">Nome</td>
+        <td class="td_titulo">Data</td>
+        <td class="update">Update</td>
+        <td class="delete">Delete</td>
+      </tr>
+
+
+      {% for i in clientes %}
+      <tr>
+        <td><a href="{% url 'cliente_detalhe' i.id %}" class="nome">{{ i.nome }}</a></td>
+        <td>{{ i.data }}</td>
+        <td>
+          <a href="{% url 'update_anotacao' i.id %}" class="a_link editar">Editar</a>
+        </td>
+        <td><a href="{% url 'delete_anotacao' i.id %}" class="a_link deletar">Deletar</a>
+        </td>
+      </tr>
+      {% endfor %}
+    </table>
+
+  </div>
+
+
+
+</body>
+
+</html>
